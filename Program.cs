@@ -6,7 +6,7 @@ namespace MyATM
     class Program
     {
         static string c_Pin = "6789";
-        static double balance = 1000;
+        static privat double balance = 1000;
         static int counter = 2;
         static void Main(string[] args)
         {
