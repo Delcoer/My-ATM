@@ -5,9 +5,12 @@ namespace MyATM
 {
     class Program
     {
-        static string c_Pin = "6789";
-        static privat double balance = 1000;
+         static string c_Pin = "6789";
+        static double balance = 1000;
         static int counter = 2;
+
+        //public delegate int Math(int x, int y); --> not using
+
         static void Main(string[] args)
         {
 
@@ -17,7 +20,7 @@ namespace MyATM
             //Text colour
             Console.ForegroundColor = ConsoleColor.Green;
 
-            Console.WriteLine("Hello customer! Please enter your PIN! With x/X reject card!\n"); 
+            Console.WriteLine("Hello customer! Please enter your PIN! With x/X reject card!\n");
 
             //Checking PIN
             while (true)
@@ -26,7 +29,7 @@ namespace MyATM
                 {
                     string pin = AskPIN();
 
-                    if(pin == "x" || pin == "X")
+                    if (pin == "x" || pin == "X")
                     {
                         Console.ForegroundColor = ConsoleColor.Blue;
                         Console.WriteLine("\n\nThank you for your visit and goodbye!\n");
@@ -103,8 +106,8 @@ namespace MyATM
                                     break;
                                 }
                                 break;
-                                
-                                
+
+
                             case "3":
                                 while (true)
                                 {
@@ -154,7 +157,7 @@ namespace MyATM
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("Thank you for your visit and goodbye!");
                             Environment.Exit(0);
-                            
+
                         }
 
                         else
@@ -171,7 +174,7 @@ namespace MyATM
                     continue;
                 }
             }
-                                     
+
         }
 
         //Method for request PIN and hide with *
@@ -201,6 +204,31 @@ namespace MyATM
             }
 
         }
+
+        
+        
+        /*
+
+        //Methods for delegatesc --> not using
+
+        static Berrechne Rechnung = new Math(Addition);
+        int Ergebnis = Rechnung(4, 3);
+
+        
+
+        static int Addition(int x,int y)
+        {
+            return x + y;
+            
+        }
+
+        static int Subtraktion (int x, int y)
+        {
+
+            return x - y;
+        }
+
+        */
 
     }
 }
